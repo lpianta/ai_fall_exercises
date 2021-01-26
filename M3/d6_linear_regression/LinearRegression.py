@@ -17,7 +17,7 @@ class LinearRegression:
         x_mean = np.mean(self.x)
         y_mean = np.mean(self.y)
 
-        # initializing numerator and denominator for b
+        # initializing numerator and denominator for b (numerator is covariance for x and y, denominator is variance for x)
         b_num = 0
         b_den = 0
 
