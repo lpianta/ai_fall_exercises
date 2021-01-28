@@ -10,7 +10,7 @@ class KNN:
         self.k = k
     
     def euclidean_distance(self, x1, x2):
-        distance = np.linalg.norm(self.x1 - self.x2)
+        distance = np.linalg.norm(x1 - x2)
         return distance
 
     def fit(self, X_train, y_train):
@@ -24,7 +24,7 @@ class KNN:
             dist = []
 
             for j in range (len(self.X_train)):
-                distance = euclidean_distance(X_train[j, :], i)
+                distance = self.euclidean_distance(X_train[j, :], i)
                 dist.append(distance)
             
             dist = np.array(dist)
