@@ -1,0 +1,174 @@
+version: "2.4.X"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - netflix
+  - genre_list
+  - action
+  - anime
+  - children
+  - classic 
+  - comedies 
+  - documentary
+  - dramas 
+  - horror 
+  - music 
+  - romantic 
+  - fantasy
+  - sports 
+  - thrillers 
+  - tv_shows 
+
+responses:
+  utter_no:
+  - text: "Maybe then go for a walk!"
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Do you wanna watch a movie to cheer you up?"
+
+  utter_did_that_help:
+  - text: "Did you enjoy?"
+  
+  utter_happy:
+  - text: "Do you wanna watch a movie?"
+  
+  utter_do_you_have_netflix:
+  - text: "Do you use netflix?"
+
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  
+  utter_netflix:
+  - text: "Do you want to see the genre list?"
+  
+  utter_genre_list:
+  - text: "Here are the genre available: Action & Adventure (1365),
+    Anime (7424),
+    Children & Family (783),
+    Classic (31574),
+    Comedies (6548),
+    Documentaries (6839),
+    Dramas (5763),
+    Horror (8711),
+    Music (1701),
+    Romantic (8883),
+    Sci-fi & Fantasy (1492),
+    Sports (4370),
+    Thrillers (8933),
+    TV Shows (83)
+    What do you like to watch?."
+    
+  utter_action:
+  - text: "I recommend the movie: 2012"
+  - text: "I recommend the movie: 6  Underground"  
+  - text: "I recommend the movie: Baahubali (The Beginning and The Conclusion)"
+  - text: "I recommend the movie: The Bank Job"
+  - text: "I recommend the movie: Beyond Skyline"
+  
+  utter_tv_shows:
+  - text: "I recommend the movie: The Simpsons"
+  - text: "I recommend the movie: The Twilight Zone"  
+  - text: "I recommend the movie: Mad Men"
+  - text: "I recommend the movie: Game of Thrones"
+  - text: "I recommend the movie: Breaking Bad"
+  
+  utter_anime:
+  - text: "I recommend the movie: Death Note"
+  - text: "I recommend the movie: Fullmetal Alchemist: Brotherhood"  
+  - text: "I recommend the movie: The Promised Neverland"
+  - text: "I recommend the movie: GCode Geass: Lelouch of the Rebellion"
+  - text: "I recommend the movie: Steins;Gate"
+  
+  utter_children:
+  - text: "I recommend the movie: We Can Be Heroes"
+  - text: "I recommend the movie: The BFG"  
+  - text: "I recommend the movie: Zathura: A Space Adventure"
+  - text: "I recommend the movie: Hook"
+  - text: "I recommend the movie: Rango"
+  
+  utter_classic:
+  - text: "I recommend the movie: Searching For Bobby Fischer"
+  - text: "I recommend the movie: Fiddler on the Roof"  
+  - text: "I recommend the movie: Enter the Dragon"
+  - text: "I recommend the movie: Mad Max"
+  - text: "I recommend the movie: Bonnie and Clyde"
+  
+  utter_comedies:
+  - text: "I recommend the movie: Julie & Julia"
+  - text: "I recommend the movie: The Bling Ring"  
+  - text: "I recommend the movie: Hunt for the Wilderpeople"
+  - text: "I recommend the movie: My Best Friend's Wedding"
+  - text: "I recommend the movie: The Half of It"
+  
+  utter_documentary:
+  - text: "I recommend the movie: 13th"
+  - text: "I recommend the movie: My Octopus Teacher"  
+  - text: "I recommend the movie: The Last Dance"
+  - text: "I recommend the movie: The Speed Cubers"
+  - text: "I recommend the movie: Tiger King: Murder, Mayhem and Madness"
+  
+  utter_drama:
+  - text: "I recommend the movie: Mank"
+  - text: "I recommend the movie: Nightcrawler"  
+  - text: "I recommend the movie: Uncut Gems"
+  - text: "I recommend the movie: The Trial of the Chicago 7"
+  - text: "I recommend the movie: A Clockwork Orange"
+  
+  utter_horror:
+  - text: "I recommend the movie: Hush"
+  - text: "I recommend the movie: CAM"  
+  - text: "I recommend the movie: Sweetheart"
+  - text: "I recommend the movie: The Evil Dead"
+  - text: "I recommend the movie: Pan's Labyrinth"
+  
+  utter_music:
+  - text: "I recommend the movie: Supersonic"
+  - text: "I recommend the movie: ZZ Top - Straight Outta Texas"  
+  - text: "I recommend the movie: The Dirt"
+  - text: "I recommend the movie: Rush - Beyond The Lighted Stage"
+  - text: "I recommend the movie: What Happened Miss Simone?"
+  
+  utter_romantic:
+  - text: "I recommend the movie: Love Guaranteed"
+  - text: "I recommend the movie: The Kissing Booth 2"  
+  - text: "I recommend the movie: To All the Boys: P.S. I Still Love You"
+  - text: "I recommend the movie: After"
+  - text: "I recommend the movie: Always Be My Maybe"
+  
+  utter_fantasy:
+  - text: "I recommend the movie: Kung Fu Hustle"
+  - text: "I recommend the movie: Happy as Lazzaro"  
+  - text: "I recommend the movie: How to Train Your Dragon 2"
+  - text: "I recommend the movie: A Whisker Away"
+  - text: "I recommend the movie: The Little Prince"
+  
+  utter_sport:
+  - text: "I recommend the movie: Glory Road"
+  - text: "I recommend the movie: Prefontaine"  
+  - text: "I recommend the movie: He Got Game"
+  - text: "I recommend the movie: The Waterboy"
+  - text: "I recommend the movie: Goon"
+  
+  utter_thriller:
+  - text: "I recommend the movie: El Camino: A Breaking Bad Movie"
+  - text: "I recommend the movie: Bird Bo"  
+  - text: "I recommend the movie: Cam"
+  - text: "I recommend the movie: Velvet Buzzsaw"
+  - text: "I recommend the movie: I Care A Lot"
+
+  utter_goodbye:
+  - text: "Enjoy the streaming!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

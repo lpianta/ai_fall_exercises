@@ -1,0 +1,173 @@
+version: "2.4.X"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    
+- intent: netflix
+  examples: |
+    - I don't know what to watch
+    - Can you recommend me something on Netflix?
+    
+- intent:  genre_list
+  examples: |
+    - What are the genre available on Netflix?
+    - what kind of movie are available on netflix?
+
+- intent:  action
+  examples: |
+    - I want to watch an action movie?
+    - Can you suggest me an action movie to watch?
+    
+- intent:  anime
+  examples: |
+    - I want to watch an anime movie?
+    - Can you suggest me an anime movie to watch?
+    
+- intent:  children
+  examples: |
+    - I want to watch a Children movie?
+    - Can you suggest me a Children movie to watch?
+    
+- intent:  classic
+  examples: |
+    - I want to watch a Classic movie?
+    - Can you suggest me a Classic movie to watch?
+    
+- intent:  comedies
+  examples: |
+    - I want to watch a Comedy movie?
+    - Can you suggest me a Comedy movie to watch?
+    
+- intent:  documentary
+  examples: |
+    - I want to watch a Documentary movie?
+    - Can you suggest me a Documentary movie to watch?
+    
+- intent:  drama
+  examples: |
+    - I want to watch a Drama movie?
+    - Can you suggest me a Drama movie to watch?
+    
+- intent:  horror
+  examples: |
+    - I want to watch a Horror movie?
+    - Can you suggest me a Horror movie to watch?
+    
+- intent:  music
+  examples: |
+    - I want to watch a Music movie?
+    - Can you suggest me a Music movie to watch?
+    
+- intent:  romantic
+  examples: |
+    - I want to watch a Romantic movie?
+    - Can you suggest me a Romantic movie to watch?
+    
+- intent:  fantasy
+  examples: |
+    - I want to watch a Fantasy movie?
+    - Can you suggest me a Fantasy movie to watch?
+    
+- intent:  sport
+  examples: |
+    - I want to watch a Sport movie?
+    - Can you suggest me a Sport movie to watch?
+    
+- intent:  thriller
+  examples: |
+    - I want to watch a Thriller movie?
+    - Can you suggest me a Thriller movie to watch?
+    
+- intent:  tv_shows
+  examples: |
+    - I want to watch a TV shows movie?
+    - Can you suggest me a TV shows movie to watch?
+    

@@ -1,0 +1,286 @@
+version: "2.4.X"
+
+stories:
+
+  
+- story: Recommend an action movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: action
+  - action: utter_action
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  
+- story: Recommend an anime
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: anime
+  - action: utter_anime
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: Recommend a children movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: children
+  - action: utter_children
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  
+- story: Recommend a classic movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: classic
+  - action: utter_classic
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: Recommend a comedy movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: comedies
+  - action: utter_comedies
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  
+- story: Recommend a documentary
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: documentary
+  - action: utter_documentary
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  
+- story: Recommend a drama
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: drama
+  - action: utter_drama
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  
+- story: Recommend a horror movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: horror
+  - action: utter_horror
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: Recommend a music
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: music
+  - action: utter_music
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  
+  
+- story: Recommend a romantic movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: romantic
+  - action: utter_romantic
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: Recommend a fantasy movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: fantasy
+  - action: utter_fantasy
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  
+- story: Recommend a sport movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: sport
+  - action: utter_sport
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: Recommend a thriller movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: thriller
+  - action: utter_thriller
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  
+- story: Recommend a tv show
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: mood_unhappy
+    - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_do_you_have_netflix
+  - intent: affirm
+  - action: utter_netflix
+  - intent: affirm
+  - action: utter_genre_list
+  - intent: tv_shows
+  - action: utter_tv_shows
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+
