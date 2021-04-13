@@ -1,10 +1,9 @@
-p {
-  font-size: 13px;
+body {
   font-family: Helvetica;
+  font-size: 13px;
 }
 
 .menu {
-  padding: 5px;
   float: right;
   margin-top: 30px;
   margin-right: 20px;
@@ -13,16 +12,33 @@ p {
   font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
 }
 
-.title {
-  padding: 5px;
-  float: right;
-  margin-top: 30px;
-  margin-right: 20px;
-  text-align: right;
-  width: 150px;
-  font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
+.menu ul {
+  list-style-type: none;
 }
 
-h1 {
-  color: red;
+.content {
+  margin-top: 15px;
+  float: left;
+  width: 500px;
+}
+
+.content p {
+  color: #333;
+  line-height: 18px;
+}
+
+.content ul {
+  color: #333;
+  line-height: 18px;
+}
+
+.left {
+  height: 1px;
+  float: left;
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  width: 200px;
+  margin: 0;
+  padding: 0;
 }

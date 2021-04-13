@@ -13,10 +13,12 @@
   <body>
     <div class="menu">
       <span class="Title">Patrick Collison</span>
-      <p><a href="/about.html"></a>About</p>
-      <p><a href="/advice.html"></a>Advice</p>
-      <p><a href="/blog.html"></a>Blog</p>
-      <p><a href="/bookshelf.html"></a>Bookshelf</p>
+      <ul>
+        <li><a href="{{url_for('about')}}">About</a></li>
+        <li><a href="{{url_for('advice')}}">Advice</a></li>
+        <li><a href="{{url_for('blog')}}">Blog</a></li>
+        <li><a href="{{url_for('bookshelf')}}">Bookshelf</a></li>
+      </ul>
     </div>
     {% block body %}{% endblock %}
   </body>
