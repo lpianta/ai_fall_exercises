@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/mainpage.css') }}"
+    />
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <div class="menu">
+      <span class="Title">Patrick Collison</span>
+      <p><a href="/about.html"></a>About</p>
+      <p><a href="/advice.html"></a>Advice</p>
+      <p><a href="/blog.html"></a>Blog</p>
+      <p><a href="/bookshelf.html"></a>Bookshelf</p>
+    </div>
+    {% block body %}{% endblock %}
+  </body>
+</html>
