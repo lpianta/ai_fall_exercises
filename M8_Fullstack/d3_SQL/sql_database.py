@@ -40,25 +40,35 @@ def sql_execute(sentence):
         return ex
 
 
-def pd_select(sentence):
-
-    try:
-
-        df = pd.read_sql_query(sentence, conn)
-        return df
-    except Exception as ex:
-        print(ex)
-        return ex
-
-
 def pd_upload_csv(name: str, pth, head=0):
     try:
-        df = pd.read_csv(pth, header=head, index_col=False)
-        frame = df.to_sql(name, get_conn(), if_exists='replace')
+        df = pd.read_csv(pth, header=head)
+        frame = df.to_sql(name, get_conn(), if_exists='replace', index=False)
         return frame
     except Exception as ex:
         print(ex)
         return ex
+
+
+def pandas_select(stc):
+    try:
+        if stc.split()[0].lower() == "select":
+            df = pd.read_sql_query(stc, conn)
+            return df
+        else:
+            return pd.DataFrame()
+    except Exception as ex:
+        return pd.DataFrame()
+
+
+def sql_query(stc):
+    try:
+        c = conn.cursor()
+        reply = c.execute(stc)
+        conn.commit()
+        return reply
+    except Exception as ex:
+        print(ex)
 
 
 def close():

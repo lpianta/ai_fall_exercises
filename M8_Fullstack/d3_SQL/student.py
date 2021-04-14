@@ -34,6 +34,6 @@ sql_database.sql_execute(joby)
 sql_database.sql_execute(aderemi)
 
 
-df = sql_database.pd_select("select * from student")
+df = sql_database.pandas_select("select * from student")
 print(df)
 sql_database.close()
