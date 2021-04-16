@@ -151,6 +151,10 @@ heading h2 {
   color: #fff;
 }
 
+.project a {
+  text-decoration: none;
+}
+
 .project .content {
   display: flex;
   justify-content: center;
