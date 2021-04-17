@@ -135,6 +135,27 @@ heading h2 {
   margin-bottom: 10px;
 }
 
+.pythonlogo {
+  width: 5%;
+  height: auto;
+}
+
+.skBx {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  border-radius: 25px;
+  margin-top: 30px;
+}
+
+.skBx:hover {
+  background: #2196f3;
+}
+
+.skBx p {
+  padding: 5px;
+}
+
 .w50 {
   min-width: 50%;
 }
@@ -170,6 +191,7 @@ heading h2 {
   margin: 20px;
   text-align: center;
   transition: 0.5s;
+  min-height: 341px;
 }
 
 .project .content .projectBx:hover {
