@@ -68,8 +68,10 @@ with mp_holistic.Holistic(
         try:
             results = holistic.process(frame)
             
+            # get face points
             face_point = face_points_coords(face_point_lm)
 
+            # get camera parameters
             camera_matrix = cam_internal_param(size)
 
             # solve perspective
@@ -78,6 +80,7 @@ with mp_holistic.Holistic(
             # get 2d projection of points
             (nose_end_point2D, jacobian) = cv2.projectPoints(np.array([(0.0, 0.0, 1000.0)]), rotation_vector, translation_vector, camera_matrix, dist_coeffs)
 
+            # get point of nosetip and line projection
             p1 = ( int(face_point[0][0]), int(face_point[0][1]))
             p2 = ( int(nose_end_point2D[0][0][0]), int(nose_end_point2D[0][0][1]))
 
