@@ -1,21 +1,32 @@
 # import libraries
+import argparse
 import cv2
 import math
 import mediapipe as mp
 import numpy as np
 from scipy.spatial import distance as dist
 
+# argument parsing
+ap = argparse.ArgumentParser()
+ap.add_argument("-c", "--model_config", type=str, default="../models/ssd_mobilenet_v3/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt",
+	help="path to model config file")
+ap.add_argument("-w", "--model_weights", type=str, default="../models/ssd_mobilenet_v3/frozen_inference_graph.pb",
+	help="path to model weights file")
+ap.add_argument("-i", "--input", type=int, default=1,
+	help="index of webcam on system")
+args = vars(ap.parse_args())
+
 # mediapipe initialization
 mp_holistic = mp.solutions.holistic
 
-# model setting
+# mobilenet model setting
 class_name = []
-class_file = "models/ssd_mobilenet_v3/coco.names"
+class_file = "../models/ssd_mobilenet_v3/coco.names"
 with open(class_file, 'rt') as f:
     class_name = f.read().rstrip("\n").split("\n")
 
-config = "models/ssd_mobilenet_v3/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt"
-weights = "models/ssd_mobilenet_v3/frozen_inference_graph.pb"
+config = args["model_config"]
+weights = args["model_weights"]
 
 net = cv2.dnn_DetectionModel(weights, config)
 net.setInputSize(320, 320)
@@ -102,7 +113,7 @@ def cam_internal_param(frame_size):
     return camera_matrix
 
 # openCV implementation
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(args["input"])
 
 with mp_holistic.Holistic(
     min_detection_confidence=0.5,
