@@ -116,6 +116,6 @@ def main(subset, year, root_dir, category='cell phone'):
 
 
 if __name__ == '__main__':
-    subset, year = 'train', '2017'  # val - train
+    subset, year = 'test-dev', '2017'  # val - train
     root_dir = '/media/lpianta/Dati/strive/ai_fall_exercises/Capstone_Project/data/imgs/coco_cellphone/'
     main(subset, year, root_dir, category='cell phone')
