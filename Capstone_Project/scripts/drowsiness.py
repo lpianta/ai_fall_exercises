@@ -1,13 +1,11 @@
-# importing libraries
+# import libraries
 import cv2
 import mediapipe as mp
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy.spatial import distance as dist
 
 # mediapipe initialization
 mp_holistic = mp.solutions.holistic
-mp_drawing = mp.solutions.drawing_utils
 
 # constants
 left_eye_lm = [33, 246, 161, 160, 159, 158, 157, 173, 133, 155, 154, 153, 145, 144, 163, 7]
