@@ -6,9 +6,6 @@ import mediapipe as mp
 import numpy as np
 from scipy.spatial import distance as dist
 from threading import Thread
-from pydub import AudioSegment
-import simpleaudio
-
 
 # argument parsing
 ap = argparse.ArgumentParser()
@@ -18,8 +15,6 @@ ap.add_argument("-w", "--model_weights", type=str, default="../models/ssd_mobile
                 help="path to model weights file")
 ap.add_argument("-i", "--input", type=int, default=1,
                 help="index of webcam on system")
-ap.add_argument("-a", "--alarm", type=str, default="../media/alarm_sound.wav",
-                help="path to alarm .wav file")
 args = vars(ap.parse_args())
 
 # mediapipe initialization
@@ -71,6 +66,7 @@ ear_frame_counter = 0
 ear_threshold = []
 
 # functions
+
 
 def eye_coords(frame, landmarks):
     height, width, _ = frame.shape
@@ -194,7 +190,7 @@ with mp_holistic.Holistic(
             # check head orientation
             if p2[1] > p1[1] + 50:
                 cv2.putText(frame, "LOOKING DOWN", (20, 200),
-                            cv2.FONT_HERSHEY_PLAIN, 2, (255, 0, 0))
+                            cv2.FONT_HERSHEY_PLAIN, 2, (255, 0, 0), 4)
 
             # take some time to initialize EARs
             if frame_counter < 30:
@@ -208,21 +204,20 @@ with mp_holistic.Holistic(
 
                 # print EAR on the frame
                 cv2.putText(
-                    frame, f"EAR: {round(ear, 2)}", (20, 20), cv2.FONT_HERSHEY_PLAIN, 2, (255, 0, 0))
+                    frame, f"EAR: {round(ear, 2)}", (20, 20), cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255))
 
                 # check if EAR goes below the threshold for a number of frames
                 if ear < ear_threshold:
                     ear_frame_counter += 1
 
                     if ear_frame_counter >= 10:
-                        
-                        cv2.putText(frame, "WARNING!", (20, 100),
-                                    cv2.FONT_HERSHEY_PLAIN, 4, (255, 0, 0))
+
+                        cv2.putText(frame, "WARNING!", (20, 110),
+                                    cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 0, 0), 4)
 
                 else:
                     ear_frame_counter = 0
-                        
-                    
+
             # draw boxes and prediction if there is cellphone detection
             if len(class_ids) != 0:
                 for class_id, confidence, box in zip(class_ids.flatten(), conf.flatten(), bbox):
